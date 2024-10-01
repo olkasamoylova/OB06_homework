@@ -15,7 +15,20 @@ class Hero:
     def is_alive(self):
         return self.health > 0
 
-    
+    class Game():
+        def __init__(self, player_name):
+            self.player = Hero(player_name)
+            self.computer = Hero("Компьютер")
+
+
+        def start(self):
+            print("Игра начинается")
+            round_counter = 1
+
+            while self.player.is_alive() and self.computer.is_alive():
+                print(f"\nРаунд {round_counter}")
+                round_counter += 1
+
 
 
 
